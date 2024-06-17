@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+</head>
+<body>
+
+  <form action="endereço para enviar as informações" method="POST">
+    
+    <fieldset>
+      <legend>Entradas de Texto</legend>
+
+      <label for="simple-text">Texto Simples</label>
+      <input type="text" name="simple-text" placeholder="Texto simples">
+      <br>
+
+      <label for="email">Verifica se é email</label>
+      <input type="email" name="email" placeholder="Email">
+      <br>
+
+      <label for="password">Não mostra os valores digitados</label>
+      <input type="password" name="password" placeholder="Senha" required>
+      <br>
+
+      <label for="number">Permite digitar números de 10 a 50 dando saltos de 5 em 5</label>
+      <input type="number" name="number" min="10" max="50" step="5">
+      <br>
+
+      <label for="telephone-number">Número de Telefone</label>
+      <input type="tel" name="telephone-number">
+      <br>
+
+      <label for="website">URLs</label>
+      <input type="url" name="website">
+      <br>
+
+      <label>Existe um campo oculto aqui:</label>
+      <input type="hidden" name="some-hidden-field" value="some-value">
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+      <legend>Campos de múltipla escolha</legend>
+
+        <label for="color">Botão radio de opção única</label>
+        <input type="radio" name="color" value="yellow">
+        <input type="radio" name="color" value="red" checked>
+        <input type="radio" name="color" value="blue">
+        <br>
+
+        <label for="checkbox">Checkbox com uma opção previamente marcada</label>
+        <input type="checkbox" name="checkbox" value="yellow">
+        <input type="checkbox" name="checkbox" value="red" checked>
+        <input type="checkbox" name="checkbox" value="blue">
+        <br>
+
+        <label for="select">Um grupo de opções com grupo primário e secundário, mas isso é só estético</label>
+        <select name="select">
+          <optgroup label="Primary">
+            <option value="">None</option>
+            <option value="red" disabled>Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+          </optgroup>
+          <optgroup label="Others">
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+          </optgroup>
+        </select>
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+      <legend>Datas e Tempo</legend>
+
+        <label for="data">Adiciona a data</label>
+        <input type="date" name="data">
+        <br>
+
+        <label for="time">Hora</label>
+        <input type="time" name="time">
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+      <label for="arquivos">Permite mandar múltiplos arquivos em formatos específicos</label>
+      <input type="file" name="arquivos" multiple name="secret-documents" accept=".jpg, .jpeg, .png">
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+      <legend>Os diferenciados</legend>
+      
+      <label for="color">Adicionar uma cor com uma cor já previamente definida</label>
+      <input type="color" name="color" value="#FF5600">
+      <br>
+
+      <label for="range">Permite usar essa barrinha para adicionar um número, essa vai de 0 a 100 a passos de 10 em 10 e previamente marcada como 30</label>
+      <input type="range" name="range" min="0" max="100" value="30" step="10">
+    </fieldset>
+    <br><br>
+
+    <textarea name="textarea" rows="5" cols="50"></textarea>
+    <br><br>
+
+    <input type="button" value="Botão Comum">
+    
+    <input type="reset"><br><br>
+    
+    <input type="submit" value="Botão de Enviar">
+  </form>
+  
+</body>
+</html>
